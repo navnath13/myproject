@@ -1,0 +1,37 @@
+<div class="w-full">
+    <div class="bg-gray-950 text-white w-full h-1/2 shadow-lg p-5">
+        <div class="flex justify-around">
+            <div  class="flex"  *ngFor="let items of category">
+              
+               
+                <div class="flex flex-col mr-20" *ngFor="let catitem of items.sections" >
+                    <h1 class="text center">{{catitem.name}}</h1>
+                    <button *ngFor="let mainpro of catitem.items" mat-button>{{mainpro.name}}</button>
+    
+                </div>
+                
+                </div>
+                <div class="hidden lg:block h-[13rem] w-[10rem]">
+                    <div class="md-5">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz4Fx3Azg0MCJrEeRBeKqxDXcPB3en8oOb8Q&usqp=CAU" alt="" class="w-[100%] h-[100%] object-cover object-top rounded-md w-full h-full"  style="height: 330px;">
+                    </div>
+              
+                    <p class="text-gray-500">New arrival</p>
+                  
+                </div>
+                <div class="hidden lg:block h-[13rem] w-[10rem]">
+                    <div class="md-5">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrJITYRFVBrZN7gGxibHOnd_Hfmn279puMTw&usqp=CAU" alt="" class="w-[100%] h-[105%] object-cover object-top rounded-md w-full h-full" style="height: 330px;">
+                    </div>
+                    <p class="text-gray-500">New arrival</p>
+                  
+                </div>
+                
+            </div>
+            <div>
+
+        </div>
+
+    </div>
+
+</div>
