@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './module/share/share.module';
 import { FeatureModule } from './module/feature/feature.module';
+import { AdminModule } from './module/admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +18,7 @@ import { FeatureModule } from './module/feature/feature.module';
     BrowserAnimationsModule,
     ShareModule,
     FeatureModule,
+    AdminModule
 
   ],
   providers: [],

@@ -35,7 +35,7 @@
                     <span class="font-bold text-lg">Ashok</span>
                    <button mat-button [matMenuTriggerFor]="menu"> <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651_640.png" class="h-10 w-10"></button>
                    <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Order</button>
+                    <button mat-menu-item (click)="navigateTo('account/order')">Order</button>
                     <button mat-menu-item>Profile</button>
                     <button mat-menu-item>Login</button>
                   </mat-menu>

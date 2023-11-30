@@ -1,0 +1,59 @@
+<div class="mt-10 space-y-5 px-5 lg:px-20">
+    <ng-container >
+        <div class="p-5 shadow-lg rounded-md box my-5">
+            <app-address-card />
+        </div>
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 relative justify-between py-5">
+          <div class="col-span-2">
+               <div class="space-y-3 box rounded-md">
+                <div *ngFor="let product of products; let last=last">
+                    <app-cart-item [showButton]="false"/>
+                <mat-divider *ngIf="!last"></mat-divider>
+                </div>
+               </div>
+          </div>
+          <div class="col-span-1">
+            <section class="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
+                <ng-container>
+                <div class="box p-5 rounded-md">
+                    <p class="text-bold text-gray-500 pb-4">price Details</p>
+                    <mat-divider></mat-divider>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pt-3">
+                            <span>Total price</span>
+                            <span >58840</span>
+                        </div>
+            
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pt-3">
+                            <span>Discount </span>
+                            <span class="text-green-400">20%</span>
+                        </div>
+            
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pt-3">
+                            <span>Delivery Charges</span>
+                            <span class="text-green-400">Free</span>
+                        </div>
+            
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pt-3">
+                            <span>Total Amount</span>
+                            <span class="text-green-400">58840</span>
+                        </div>
+            
+                    </div>
+        
+                    <button mat-raised-button  style="padding:1.5 rem;" class="text-lg mt-8 p-28 px-10 w-full" color="accent"> CHECKOUT</button>
+                </div>
+                
+                </ng-container>
+            
+            </section>
+          </div>
+        </div>
+    </ng-container>
+</div>

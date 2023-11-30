@@ -1,0 +1,59 @@
+<main>
+<div class="py-10 lg:grid grid-cols-3 lg:px-16 relative">
+    <div class="lg:col-span-2 lg:px-5">
+        <div class="box p-5 space-y-4">
+         <ng-container *ngIf="cart">
+          <div *ngFor="let product of cart; let last=last">
+           <app-cart-item />
+           <mat-divider *ngIf="!last"></mat-divider>
+          </div>
+        </ng-container>
+        </div>
+    </div>
+
+
+    <section class="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
+        <ng-container *ngIf="cart">
+        <div class="box p-5 rounded-md">
+            <p class="text-bold text-gray-500 pb-4">price Details</p>
+            <mat-divider></mat-divider>
+            <div class="space-y-3">
+                <div class="flex justify-between pt-3">
+                    <span>Total price</span>
+                    <span >58840</span>
+                </div>
+    
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between pt-3">
+                    <span>Discount </span>
+                    <span class="text-green-400">20%</span>
+                </div>
+    
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between pt-3">
+                    <span>Delivery Charges</span>
+                    <span class="text-green-400">Free</span>
+                </div>
+    
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between pt-3">
+                    <span>Total Amount</span>
+                    <span class="text-green-400">58840</span>
+                </div>
+    
+            </div>
+
+            <button mat-raised-button (click)="navigateToCheckOut()" style="padding:1.5 rem;" class="text-lg mt-8 p-28 px-10 w-full" color="accent"> CHECKOUT</button>
+        </div>
+        
+        </ng-container>
+    
+    </section>
+</div>
+
+
+
+</main>

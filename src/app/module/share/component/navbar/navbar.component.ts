@@ -1,4 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,7 +7,7 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  
+   constructor(private router:Router){}
 
   @Input() selectedSection:any;
   currentSection:any;
@@ -40,6 +41,6 @@ if(modelContainer && !clickInsideButton && this.isNavbarContentOpen){
  
      //  this for the closing window method is closed
   navigateTo(path:any){
-
+    this.router.navigate([path])
   }
 }
