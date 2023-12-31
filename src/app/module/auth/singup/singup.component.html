@@ -1,0 +1,41 @@
+<div class="bg">
+    <h1 class="text-center p-3 text-gray-800 ">Singup Form</h1>
+</div>
+<div class="m-4">
+    <form  [formGroup]="loginForm" (ngSubmit)="submitFrom()">
+        <mat-form-field class="w-full">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required firstName>
+            <mat-error *ngIf="loginForm.controls['firstName'].hasError('required')">First name is Required</mat-error>
+            
+        </mat-form-field>
+        <mat-form-field class="w-full">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required lastName>
+            <mat-error *ngIf="loginForm.controls['lastName'].hasError('required')">Last name is Required</mat-error>
+            
+        </mat-form-field>
+       
+      
+        <mat-form-field class="w-full">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required email>
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Email is Required</mat-error>
+            <mat-error *ngIf="loginForm.controls['email'].hasError('email')">Please Enter Valid Email Address</mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-full">
+            <mat-label>password</mat-label>
+            <input matInput formControlName="password" required email>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">password is Required</mat-error>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">password should be at least 8 character</mat-error>
+        </mat-form-field>
+        <div>
+            <button mat-raised-button class="w-full"  color="accent">Register</button>
+        </div>
+        <div class="text-center mt-3">
+            <span>if you don't have account ?</span>
+            <a  class="font-bold ml-3"  (click)="changeTemplate()">Login Here</a>
+        </div>
+      
+    </form>
+</div>

@@ -1,0 +1,6 @@
+<ng-container *ngIf="!isLoggedIn; else registerComponent">
+    <app-singin [changeTemplate]="changeTemplate"/>
+</ng-container>
+<ng-template #registerComponent>
+<app-singup />
+</ng-template>

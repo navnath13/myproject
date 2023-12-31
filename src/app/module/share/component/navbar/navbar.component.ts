@@ -1,5 +1,7 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import { AuthComponent } from 'src/app/module/auth/auth.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-   constructor(private router:Router){}
+   constructor(private router:Router, private dialog:MatDialog){}
 
   @Input() selectedSection:any;
   currentSection:any;
@@ -42,5 +44,13 @@ if(modelContainer && !clickInsideButton && this.isNavbarContentOpen){
      //  this for the closing window method is closed
   navigateTo(path:any){
     this.router.navigate([path])
+  }
+
+
+  handleLoginModel(){
+    this.dialog.open(AuthComponent,
+     { width:"400px",
+    disableClose:false})
+
   }
 }

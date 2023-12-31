@@ -12,6 +12,7 @@ import { AddressCardComponent } from './component/address-card/address-card.comp
 import { FormsModule } from '@angular/forms';
 import { OrdertrackerComponent } from './component/ordertracker/ordertracker.component';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -34,6 +35,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatMenuModule,
     FormsModule,
     MatDividerModule,
+    MatDialogModule
   ],
   exports:[
     NavbarComponent,
