@@ -10,7 +10,7 @@ export class ProductCardComponent {
 @Input() product:any;
 constructor(private router:Router){}
 navigate(){
-    this.router.navigate([`/product-details/${3}`])
-    console.log("on click to nag")
+    this.router.navigate([`/product-details/${this.product.id}`])
+    console.log(this.product)
 }
 }

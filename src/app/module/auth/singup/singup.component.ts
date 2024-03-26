@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
+import { authService } from 'src/app/State/Auth/auth.service';
 
 @Component({
   selector: 'app-singup',
@@ -12,7 +13,7 @@ export class SingupComponent {
 
   @Input() changeTemplate:any;
 
-  constructor(private formBuilder:FormBuilder, private store:Store){}
+  constructor(private formBuilder:FormBuilder, private store:Store,private auth:authService){}
 
   loginForm:FormGroup=this.formBuilder.group({
     firstName:['',[Validators.required]],
@@ -24,7 +25,9 @@ export class SingupComponent {
 submitFrom(){
   console.log("DATA SUBMIT")
   if(this.loginForm.value){
+    
     console.log("longin req data", this.loginForm.value)
+    this.auth.register(this.loginForm.value)
   }
 }
 }

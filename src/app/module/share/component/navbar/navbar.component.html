@@ -25,19 +25,19 @@
 
          <!-- here is the card items -->
          <div class="flex items-center ">
-            <button (click)="navigateTo('path')" mat-icon-button>
+            <button (click)="navigateToCart()" mat-icon-button>
                 <mat-icon>shopping_cart</mat-icon>
             </button>
-            <button (click)="handleLoginModel()" *ngIf="true" mat-raised-button color="accent" class="mr-5">Login</button>
+            <button (click)="handleLoginModel()" *ngIf="!user" mat-raised-button color="accent" class="mr-5">Login</button>
 
-            <div class="ml-3 relative flex items-center" *ngIf="false" >
+            <div class="ml-3 relative flex items-center" *ngIf="user" >
                 <div class="flex items-center space-x-5">
-                    <span class="font-bold text-lg">Ashok</span>
+                    <span class="font-bold text-lg">{{user.firstName}}</span>
                    <button mat-button [matMenuTriggerFor]="menu"> <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651_640.png" class="h-10 w-10"></button>
                    <mat-menu #menu="matMenu">
                     <button mat-menu-item (click)="navigateTo('account/order')">Order</button>
                     <button mat-menu-item>Profile</button>
-                    <button mat-menu-item>Login</button>
+                    <button mat-menu-item (click)="handlelogout()">Logout</button>
                   </mat-menu>
                 </div>
 

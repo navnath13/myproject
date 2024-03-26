@@ -1,12 +1,12 @@
 <div class="w-full">
     <div class="bg-gray-950 text-white w-full h-1/2 shadow-lg p-5">
         <div class="flex justify-around">
-            <div  class="flex"  *ngFor="let items of category">
+            <div  class="flex"  *ngFor="let item of category">
               
                
-                <div class="flex flex-col mr-20" *ngFor="let catitem of items.sections" >
+                <div class="flex flex-col mr-20" *ngFor="let catitem of item.sections" >
                     <h1 class="text center">{{catitem.name}}</h1>
-                    <button *ngFor="let mainpro of catitem.items" mat-button>{{mainpro.name}}</button>
+                    <button  (click)="handleNavigate('/'+catitem.name+'/'+catitem.id+'/'+mainpro.name)" *ngFor="let mainpro of catitem.items" mat-button>{{mainpro.name}}</button>
     
                 </div>
                 

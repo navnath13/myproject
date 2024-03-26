@@ -3,8 +3,8 @@
     <div class="lg:col-span-2 lg:px-5">
         <div class="box p-5 space-y-4">
          <ng-container *ngIf="cart">
-          <div *ngFor="let product of cart; let last=last">
-           <app-cart-item />
+          <div *ngFor="let cartitem of cartItems; let last=last">
+           <app-cart-item [cartItem]="cartitem" showButton="true" />
            <mat-divider *ngIf="!last"></mat-divider>
           </div>
         </ng-container>
@@ -20,14 +20,14 @@
             <div class="space-y-3">
                 <div class="flex justify-between pt-3">
                     <span>Total price</span>
-                    <span >58840</span>
+                    <span >{{TotalPrice}}</span>
                 </div>
     
             </div>
             <div class="space-y-3">
                 <div class="flex justify-between pt-3">
                     <span>Discount </span>
-                    <span class="text-green-400">20%</span>
+                    <span class="text-green-400">{{totalDiscountPrice}} Rs.</span>
                 </div>
     
             </div>
@@ -40,8 +40,15 @@
             </div>
             <div class="space-y-3">
                 <div class="flex justify-between pt-3">
+                    <span>Total Items</span>
+                    <span class="text-green-400">{{totalItem}}</span>
+                </div>
+    
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between pt-3">
                     <span>Total Amount</span>
-                    <span class="text-green-400">58840</span>
+                    <span class="text-green-400">{{totalAmount}}</span>
                 </div>
     
             </div>

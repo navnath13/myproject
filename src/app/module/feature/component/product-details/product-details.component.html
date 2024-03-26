@@ -2,20 +2,22 @@
     <p class="text-gray-500 py-10"> product/clothes/women/saree</p>
     <section class="lg:grid grid-cols-3 lg:gap-10">
         <div class="col-span-2 flex items-center flex-col">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz4Fx3Azg0MCJrEeRBeKqxDXcPB3en8oOb8Q&usqp=CAU" alt="" class="w-[50%] h-[80%]">
+            <img [src]="product?.imageUrl" alt="" class="w-[50%] h-[80%]">
         </div>
         <div class="col-span-1 space-y-10 mt-10 lg:mt-0">
             <div class="space-y-2">
-                <p class="font-semibold text-gray-600 text-lg">Nofileter</p>
-                <p class="text-xl">Men Solid pure cotton Straight kurta</p>
+                <p class="font-semibold text-gray-600 text-lg">{{product?.brand}}</p>
+                <p class="text-xl">{{product?.title}}</p>
 
             </div>
             <div class="flex items-center space-x-5">
 
-                <P class="text-lg">$203</P>
-                <P class="text-lg text-gray-600 line-through">$299</P>
-                <P class="text-lg text-green-400 font-semibold">80%</P>
+                <P class="text-lg">{{product?.price}}</P>
+                <P class="text-lg text-gray-600 line-through">{{product?.discountedPrice}}</P>
+                <P class="text-lg text-green-400 font-semibold">{{product?.discountPresent
+                }}</P>
             </div>
+
 
             <div>
             <p class="text-lg font-semibold ">Size</p>
@@ -31,8 +33,9 @@
             </div>
 
             <div>
-                <p class="text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, impedit repudiandae. Accusantium, quo neque vero itaque quia harum distinctio. Maxime minima provident eius dolorum veritatis officiis ipsam accusantium nihil possimus.</p>
-                <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur quod itaque fugiat, alias eligendi quasi necessitatibus totam illo aut similique excepturi distinctio eveniet labore magni soluta doloremque blanditiis quibusdam ut.</p>
+                <p class="text-gray-600">{{product?.title}}</p>
+                <p class="text-gray-600">{{product?.description
+                }}</p>
             </div>
         </div>
 

@@ -1,4 +1,5 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -6,7 +7,10 @@ import { Component,Input } from '@angular/core';
   templateUrl: './product-slider.component.html',
   styleUrls: ['./product-slider.component.css']
 })
-export class ProductSliderComponent {
- @Input() title:any;
- @Input() products:any;
+export class ProductSliderComponent{
+  @Input() title:any;
+  @Input() products:any;
+ 
+
+
 }

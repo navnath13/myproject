@@ -2,7 +2,7 @@
 <div class="col-span-5 lg:cols-span-5">
     <div class="rounded-md shadow h-[36.5rem] overflow-y-scroll hide-scrollbar box py-5">
   <div class="p-5 py-5 cursor-pointer">
-    <div *ngFor="let item of addresses; let last=last" class="py-2 space-y-2">
+    <div *ngFor="let item of address; let last=last" class="py-2 space-y-2">
     <app-address-card [address]="item"/>
        <button style="padding: 1.6rem;" mat-raised-button color="accent" (click)="handleCreatOrder(item)">
       Deliver Here</button>

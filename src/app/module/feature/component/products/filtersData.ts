@@ -10,6 +10,7 @@ export const filter=[
             {value :"green", label:"Green"},
             {value :"Purple", label:"Purple"},
             {value :"yellow", label:"Yellow"},
+            {value :"red", label:"red"},
            
         ]
     },
@@ -17,7 +18,7 @@ export const filter=[
         id:"size",
         name:"Size",
         options:[
-            {value:"5",label:"5"},
+            {value:"S",label:"S"},
             {value:"M",label:"M"},
             {value:"L",label:"L"},
         ]
@@ -29,10 +30,10 @@ export const singleFilter=[
         id:"price",
         name:"Price",
         options:[
-            {value:"159", label:"159rs to 399rs"},
-            {value:"399", label:"399rs to 999rs"},
-            {value:"999", label:"999rs to 1999rs"},
-            {value:"1999", label:"3999rs to 4999rs"},
+            {value:"159-199", label:"159rs to 399rs"},
+            {value:"399-999", label:"399rs to 999rs"},
+            {value:"999-1999", label:"999rs to 1999rs"},
+            {value:"1999-4999", label:"3999rs to 4999rs"},
         ]
     },
     {
